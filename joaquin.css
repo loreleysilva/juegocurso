@@ -6,3 +6,99 @@ align-items: center;
 justify-content: center;
     
 }
+.botonarriba{   
+     width: 33%;
+     height: 100% ;
+     background-color: rgb(43, 212, 241);
+     display:flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 30px;
+     cursor: pointer;
+     font-size: 100px;
+}
+
+.botonarriba::before{
+    content: '\2191';
+}
+.botonarriba:hover{
+    background-color: pink;
+
+}
+.botonarriba:active{
+    background-color: rgb(43, 212, 241);
+
+}
+
+.filadosbotones{
+    width: 100% ;
+    height: 33%;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+.botonizquierdo{ 
+       width: 33%;
+       height: 100% ;
+       background-color: blue;
+       align-items: center;
+       justify-content: center;
+       border-radius: 30px;
+       display:flex;
+       font-size: 100px;
+       cursor: pointer;
+}
+.botonizquierdo::before{
+    content: '\2190';
+}
+.botonizquierdo:hover{
+    background-color: rgb(55, 154, 201);
+}
+.botonizquierdo:active{
+    background-color: blue;
+
+}
+.botonderecho{
+    width: 33%;
+    height: 100% ;
+    background-color: red;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    cursor: pointer;
+    display:flex;
+    font-size: 100px;
+}  
+.botonderecho::before{
+    content:'\2192';
+}
+.botonderecho:hover{
+    background-color: rgb(243, 92, 150);
+
+}
+.botonderecho:active{
+    background-color: red;
+
+}
+.botonabajo{
+    width: 33%;
+    height: 100% ;
+    background-color: rgb(78, 211, 26);
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    display:flex;
+    font-size: 100px;
+    cursor: pointer;
+}
+.botonabajo::before{
+    content:'\2193';
+}
+.botonabajo:hover{
+    background-color: rgb(65, 137, 146);
+  
+}
+.botonabajo:active{
+    background-color: rgb(78, 211, 26);
+
+}
