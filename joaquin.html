@@ -11,9 +11,9 @@
 
 <div class="filadosbotones">
     <div class="botonizquierdo" onclick="apretoboton('izquierda')"> </div>
-    <div id="divNombreJugadorUno" style="background-color: coral;height: 100%; width: 16.5%;display: flex;align-items: center;justify-content: center;">
+    <div id="divNombreJugadorUno" style="background-color: coral;height: 70%; width: 16.5%;display: flex;align-items: center;justify-content: center;color: white;font-size: 25px;">
     </div>
-    <div id="divNombreJugadorDos" style="background-color: blueviolet;height: 100%; width: 16.5%;">
+    <div id="divNombreJugadorDos" style="background-color: blueviolet;height: 70%; width: 16.5%;display: flex;align-items: center;justify-content: center;color: white;font-size: 25px;">
     </div>
 
     <div class="botonderecho" onclick="apretoboton('derecho')"> </div>
@@ -29,8 +29,26 @@
 
 <script>
     function apretoboton(boton){
-        alert("apreto boton " + boton)
+        pintarboton()
     }
+    function pintarboton(){
+        if(activoJugadorUno == true){
+            document.getElementById("divNombreJugadorUno").style.backgroundColor = "red"  
+            document.getElementById("divNombreJugadorDos").style.backgroundColor = "white"
+            activoJugadorUno = false
+            document.getElementById("divNombreJugadorUno").style.color = "black"
+
+        } else {
+            document.getElementById("divNombreJugadorUno").style.backgroundColor = "white" 
+            document.getElementById("divNombreJugadorDos").style.backgroundColor = "red"
+            activoJugadorUno = true
+            document.getElementById("divNombreJugadorUno").style.color = "black"
+
+
+   
+        }
+    }
+    var activoJugadorUno = true 
     var nombreJugadorUno = prompt("ingrese nombre jugador uno lore","jugador uno")
     var nombreJugadorDos = prompt("ingrese nombre jugdor dos anto","jugador dos")
     document.getElementById("divNombreJugadorUno").innerHTML = nombreJugadorUno
