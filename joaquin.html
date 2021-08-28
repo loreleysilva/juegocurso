@@ -6,22 +6,23 @@
 <body>
 
 <div class="filaunboton"> 
-    <div class="botonarriba" onclick="apretoboton('arriba')"> </div>
+    <div class="botonarriba" onclick="clickViolet('car.mp3')"> </div>
 </div> 
 
 <div class="filadosbotones">
-    <div class="botonizquierdo" onclick="apretoboton('izquierda')"> </div>
+    <div class="botonizquierdo" onclick="clickgreen('iphone.mp3')"> </div>
     <div id="divNombreJugadorUno" style="background-color: coral;height: 70%; width: 16.5%;display: flex;align-items: center;justify-content: center;color: white;font-size: 25px;">
     </div>
     <div id="divNombreJugadorDos" style="background-color: blueviolet;height: 70%; width: 16.5%;display: flex;align-items: center;justify-content: center;color: white;font-size: 25px;">
     </div>
 
-    <div class="botonderecho" onclick="apretoboton('derecho')"> </div>
+    <div class="botonderecho" onclick="clickyellow()"> </div>
 </div>
 
 
 <div class="filaunboton"> 
-    <div class="botonabajo" onclick="apretoboton('abajo')"></div> 
+    <div class="botonabajo" onclick="clickred('messenger.mp3')">
+    </div> 
 </div>
 </body>
  
@@ -54,7 +55,25 @@
     document.getElementById("divNombreJugadorUno").innerHTML = nombreJugadorUno
     document.getElementById("divNombreJugadorDos") .innerHTML = nombreJugadorDos
 
+    function sonarAudio(nombreAudio){
+        var audio = new Audio(nombreAudio);
+        return audio.play();
 
+    }
+
+    function clickViolet(){
+        sonarAudio(car.mp3)
+    }
+    function clickgreen(){
+        sonarAudio(iphone.mp3)
+    }
+    function clickyellow(){
+        sonarAudio('./sonido/mario.mp3')
+    }
+    function clickblue(){
+        sonarAudio(messenger.mp3)
+
+    }
     
 
 
