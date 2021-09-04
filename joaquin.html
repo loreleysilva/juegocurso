@@ -6,22 +6,22 @@
 <body>
 
 <div class="filaunboton"> 
-    <div class="botonarriba" onclick="clickViolet('car.mp3')"> </div>
+    <div class="botonarriba" onclick="clickarriba()"> </div>
 </div> 
 
 <div class="filadosbotones">
-    <div class="botonizquierdo" onclick="clickgreen('iphone.mp3')"> </div>
+    <div class="botonizquierdo" onclick="clickizquierdo()"> </div>
     <div id="divNombreJugadorUno" style="background-color: coral;height: 70%; width: 16.5%;display: flex;align-items: center;justify-content: center;color: white;font-size: 25px;">
     </div>
     <div id="divNombreJugadorDos" style="background-color: blueviolet;height: 70%; width: 16.5%;display: flex;align-items: center;justify-content: center;color: white;font-size: 25px;">
     </div>
 
-    <div class="botonderecho" onclick="clickyellow()"> </div>
+    <div class="botonderecho" onclick="clickderecho()"> </div>
 </div>
 
 
 <div class="filaunboton"> 
-    <div class="botonabajo" onclick="clickred('messenger.mp3')">
+    <div class="botonabajo" onclick="clickabajo()">
     </div> 
 </div>
 </body>
@@ -29,10 +29,9 @@
 </html> 
 
 <script>
-    function apretoboton(boton){
-        pintarboton()
-    }
-    function pintarboton(){
+    
+        
+    function cambiarJugador(){
         if(activoJugadorUno == true){
             document.getElementById("divNombreJugadorUno").style.backgroundColor = "red"  
             document.getElementById("divNombreJugadorDos").style.backgroundColor = "white"
@@ -61,17 +60,21 @@
 
     }
 
-    function clickViolet(){
-        sonarAudio(car.mp3)
+    function clickarriba(){
+        sonarAudio('./sonido/moneda.mp3')
+        cambiarJugador()
     }
-    function clickgreen(){
-        sonarAudio(iphone.mp3)
+    function clickizquierdo(){
+        sonarAudio('./sonido/iphone.mp3')
+        cambiarJugador()
     }
-    function clickyellow(){
+    function clickderecho(){
         sonarAudio('./sonido/mario.mp3')
+        cambiarJugador()
     }
-    function clickblue(){
-        sonarAudio(messenger.mp3)
+    function clickabajo(){
+        sonarAudio('./sonido/messenger.mp3')
+        cambiarJugador()
 
     }
     
