@@ -60,17 +60,27 @@
     var indice=0
     var juegaJugaor1=true 
     function ejecutarTurno(boton){
-        if(indice<movimientos.length)
-        indice=indice+1
+        console.log(movimientos,indice,boton)
+        if(indice<movimientos.length){
+            
+            
+            if(movimientos[indice] != boton){
+                alert("perdio")
+            }
+            else{
+                indice += 1
+            }
+        }
 
         else{
-        movimientos.push(movimientos)
-        indice=0
-        juegaJugaor1=false
-        cambiarJugador(juegaJugaor1)
+            movimientos.push(boton)
+            indice=0
+            juegaJugaor1=false
+            cambiarJugador(juegaJugaor1)
 
 
         }
+        console.log(movimientos,indice,boton)
 
     }
 
@@ -82,19 +92,19 @@
 
     function clickarriba(){
         sonarAudio('./sonido/moneda.mp3')
-        cambiarJugador()
+        ejecutarTurno("arriba")
     }
     function clickizquierdo(){
-        sonarAudio('./sonido/alarm.mp3')
-        cambiarJugador()
+        sonarAudio('./sonido/samsung.mp3')
+        ejecutarTurno("izquierdo")
     }
     function clickderecho(){
         sonarAudio('./sonido/iphone.mp3')
-        cambiarJugador()
+        ejecutarTurno("derecho")
     }
     function clickabajo(){
         sonarAudio('./sonido/messenger.mp3')
-        cambiarJugador()
+        ejecutarTurno("abajo")
    }
     
 
